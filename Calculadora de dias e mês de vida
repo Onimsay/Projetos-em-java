@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+/**
+ * By Nimsay
+ *
+ */
+
+
+public class Anos {
+    public static void main(String[] args) {
+        int dia, mes, ano, idade, dia_vida, ano_atual, mes_atual, dia_atual;
+        String nome;
+        Scanner leia = new Scanner(System.in);
+
+        System.out.print("Informe o seu nome: ");
+        nome = leia.nextLine();
+        
+        System.out.print("Informe o dia do seu nascimento: ");
+        dia = leia.nextInt();
+        System.out.print("Informe o mês do seu nascimento: ");
+        mes = leia.nextInt();
+        System.out.print("Informe o ano do seu nascimento: ");
+        ano = leia.nextInt();
+
+        System.out.print("Informe o dia atual: ");
+        dia_atual = leia.nextInt();
+        System.out.print("Informe o mês atual: ");
+        mes_atual = leia.nextInt();
+        System.out.print("Informe o ano atual: ");
+        ano_atual = leia.nextInt();
+
+        if (mes <= mes_atual) {
+            idade = ano_atual - ano;
+        } else {
+            idade = ano_atual - ano - 1;
+        }
+
+        dia_vida = idade * 365;
+
+        System.out.println("Olá, " + nome + "!");
+        System.out.println("Você tem " + idade + " anos de vida e " + dia_vida + " dias de vida.");
+    }
+}
